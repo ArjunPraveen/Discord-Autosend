@@ -3,6 +3,7 @@ from sys import stderr
 from json import dumps 
 from time import sleep 
 import os
+import sys
 from dotenv import load_dotenv
 import time 
 load_dotenv()
@@ -44,7 +45,7 @@ def send_message(conn, channel_id, message_data):
  
     except Exception as e: 
         stderr.write("Failed to send_message\n") 
-        print(e)
+        print('Error on line {}'.format(sys.exc_info()[-1].tb_lineno), type(e).__name__, e)
  
 def main(msg): 
     message_data = { 
