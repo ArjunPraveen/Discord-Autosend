@@ -38,11 +38,12 @@ def send_message(conn, channel_id, message_data):
             pass 
  
         else: 
-            stderr.write(f"Received HTTP {resp.status}: {resp.reason}\n") 
+            stderr.write(f"Received HTTP {resp.status}: {resp.reason}\n")
             pass 
  
-    except: 
+    except Exception as e: 
         stderr.write("Failed to send_message\n") 
+        print(e)
  
 def main(msg): 
     message_data = { 
