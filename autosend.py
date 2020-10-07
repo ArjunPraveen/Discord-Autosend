@@ -54,7 +54,9 @@ def main(msg):
  
 if __name__ == '__main__': 
     #countdown(2700)
-    main('test')
+    while 1:
+        main('test')
+        countdown(120)
     
     
         
