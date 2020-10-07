@@ -1,1 +1,1 @@
-web: python autosend.py
+hello: python autosend.py
