@@ -20,9 +20,9 @@ def countdown(t):
 header_data = { 
     "content-type": "application/json", 
     "user-agent": "hello there", 
-    "authorization": os.environ.get("user-token"), 
+    "authorization": os.environ.get("user_token"), 
     "host": "discordapp.com", 
-    "referer":  os.environ.get("channel-link")
+    "referer":  os.environ.get("channel_link")
 } 
  
 def get_connection(): 
@@ -50,7 +50,7 @@ def main(msg):
         "tts": "false", 
     } 
  
-    send_message(get_connection(), os.environ.get("channel-id"), dumps(message_data)) 
+    send_message(get_connection(), os.environ.get("channel_id"), dumps(message_data)) 
  
 if __name__ == '__main__': 
     #countdown(2700)
