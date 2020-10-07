@@ -38,6 +38,7 @@ def send_message(conn, channel_id, message_data):
             pass 
  
         else: 
+            print(resp.status)
             stderr.write(f"Received HTTP {resp.status}: {resp.reason}\n")
             pass 
  
